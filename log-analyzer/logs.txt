@@ -1,0 +1,3 @@
+2025-08-17 19:24:01 INFO User login successful
+2025-08-17 19:25:12 WARNING Disk space low
+2025-08-17 19:26:33 ERROR Failed to connect to server
