@@ -1,0 +1,48 @@
+#cli-terminal {
+  background-color: #111;
+  color: 00ff00;
+  font-family: 'Fira Code';
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00ff00;
+  max-width: 800px;
+  margin: 0.2em auto;
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cli-output p {
+  margin: 0.2em 0;
+}
+
+.cli-input-line {
+  bottom: 0;
+  background: #111;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cli-input-line span {
+  margin-right: 0.5em;
+}
+
+.cli-input {
+  background: none;
+  border: none;
+  color: #00ff00;
+  font-family: inherit;
+  font-size: 1em;
+  flex-grow: 1;
+  outline: none;
+}
+
+#cli-output {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+

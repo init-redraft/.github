@@ -1,0 +1,54 @@
+[data-bs-theme=dark] {
+  --bs-primary: #00ff00;
+  --bs-primary-rgb: 0,255,0;
+  --bs-primary-text-emphasis: #66FF66;
+  --bs-primary-bg-subtle: #003300;
+  --bs-primary-border-subtle: #009900;
+  --bs-body-color: #00FF00;
+  --bs-body-color-rgb: 0,255,0;
+  --bs-secondary-color: rgba(0,255,0,0.75);
+  --bs-secondary-color-rgb: 0,255,0,0.75;
+  --bs-tertiary-color: rgba(0,255,0,0.5);
+  --bs-tertiary-color-rgb: 0,255,0,0.5;
+  --bs-body-font-family: 'Fira Code', monospace;
+}
+
+[data-bs-theme=dark] .btn-primary, .btn-primary[data-bs-theme=dark] {
+  --bs-btn-color: #000000;
+  --bs-btn-bg: #00ff00;
+  --bs-btn-border-color: #00ff00;
+  --bs-btn-hover-color: #000000;
+  --bs-btn-hover-bg: #26FF26;
+  --bs-btn-hover-border-color: #19FF19;
+  --bs-btn-focus-shadow-rgb: 0,38,0;
+  --bs-btn-active-color: #000000;
+  --bs-btn-active-bg: #33FF33;
+  --bs-btn-active-border-color: #19FF19;
+  --bs-btn-disabled-color: #000000;
+  --bs-btn-disabled-bg: #00ff00;
+  --bs-btn-disabled-border-color: #00ff00;
+}
+
+[data-bs-theme=dark] .btn-outline-primary, .btn-outline-primary[data-bs-theme=dark] {
+  --bs-btn-color: #00ff00;
+  --bs-btn-border-color: #00ff00;
+  --bs-btn-focus-shadow-rgb: 0,255,0;
+  --bs-btn-hover-color: #000000;
+  --bs-btn-hover-bg: #00ff00;
+  --bs-btn-hover-border-color: #00ff00;
+  --bs-btn-active-color: #000000;
+  --bs-btn-active-bg: #00ff00;
+  --bs-btn-active-border-color: #00ff00;
+  --bs-btn-disabled-color: #00ff00;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #00ff00;
+}
+
+.mt-7 {
+  margin-top: 6rem !important;
+}
+
+.ms-auto {
+  margin-left: auto !important;
+}
+
