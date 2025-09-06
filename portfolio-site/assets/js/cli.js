@@ -36,21 +36,24 @@ document.addEventListener("DOMContentLoaded", () => {
   function processCommand(cmd) {
     // Echo the typed command back to the terminal
     const line = document.createElement("p");
-    line.textContent = `daniel@portfolio:~$ ${cmd}`;
+    line.textContent = `init-redraft@portfolio:~$ ${cmd}`;
     output.appendChild(line);
 
     // Match command and respond accordingly
     switch (cmd.toLowerCase()) {
       case "help":
-        appendOutput("Available commands: help, projects, resume, clear, ping", "nmap");
+        appendOutput("Available commands: help, projects, contact, ping, clear.");
         appendOutput("Hint: not all commands are visible. Scan deeper.");
         break;
       case "projects":
         appendOutput("Opening projects module...");
         appendOutput("Visit /projects.html for full portfolio.");
         break;
-      case "resume":
-        appendOutput("Resume available at /resume.pdf");
+      case "contact":
+        appendOutput("📬 Contact Information:");
+        appendOutput("Email   : init-redraft@protonmail.com");
+        appendOutput("GitHub  : https://github.com/init-redraft");
+        appendOutput("Website : https://yourdomain.com");
         break;
       case "ping":
         appendOutput("Yes, I can hear you.")
@@ -60,8 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             appendOutput("Port 22: ssh")
             appendOutput("Port 80: http")
-            appendOutput("port1337: ???")
-            appendOutput("Payload detected. Try: whoami, sudo make me a sandwich, hack the planet, coffee, upupdowndownleftrightleftrightba, ascii_art")
+            appendOutput("port 1337: ???")
+            appendOutput("Payload detected. Try: whoami, sudo make me a sandwich, hack the planet, coffee, upupdowndownleftrightleftrightba, ascii_art.")
+            appendOutput("")
+            appendOutput("This is all of the commands...or is it. Curiosity might be rewarded.")
         }, 2000);
         break;
       case "whoami":
@@ -74,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
             appendOutput("Initializing zero-day... Injecting payload... Just kidding. You're not that reckless.")
         break;
       case "coffee":
-            appendOutput("Coffee protocol engaged. Brewing tactical clarity... ☕")
+            appendOutput("Coffee protocol engaged. Brewing productivity in a cup... ☕")
         break;
       case "upupdowndownleftrightleftrightba":
             appendOutput("Cheat mode unlocked. All modules now run in God Mode. Just kidding. You still have to earn it.")
@@ -86,8 +91,21 @@ document.addEventListener("DOMContentLoaded", () => {
             "    |  ()  |  |  ()  |\n" +
             "     \\    /    \\    /\n" +
             "      `--'      `--'\n" +
-            "     ASCII ART MODULE\n" +
             "   (Not much, but hey, it's something!)");
+        break;
+      case "test":
+        appendOutput("Do you really doubt my code works?");
+        appendOutput("That kinda hurts...")
+        break;
+      case "404":
+        appendOutput("Command not found...or is it?");
+        break;
+      case "debug":
+        appendOutput("Running Diagnostics...");
+        appendOutput("All systems nominal.")
+        break;
+      case "rm -rf/":
+        appendOutput("Nice try. Self destruct disabled.")
         break;
       case "clear":
         output.innerHTML = ""; // Wipe terminal output
