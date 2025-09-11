@@ -1,0 +1,15 @@
+{
+    "responses": {
+        "default": [
+            "Oh great, another user who thinks rebooting is a fix-all.",
+            "Did you try turning your brain off and on again?",
+            "I'm not saying it's user error, but.....it's probably user error."
+        ],
+        "keywords": {
+            "wifi": "Wi-Fi issues? Have you tried moving closer to the router, or is your device just as lost as you are?",
+            "vpn": "VPN not working? Maybe it's trying to protect you from yourself.",
+            "update": "Updates are like vegetables-nobody wants them, but they're really good for you.",
+            "password": "forget your passwrd? It was 123456 wasn't it?"
+        }
+    }
+}

@@ -1,5 +1,10 @@
 // Simple CLI Emulator. For call from portfolio website.
 
+async function loadJSON(./cli-chatbot-core/JSON) {
+  const res = aeait fetch(path);
+  return res.json();
+}
+
 function initCLI(containerId) {
   const container = document.getElementById(containerId);
 // Basic HTML structure
@@ -15,6 +20,7 @@ function initCLI(containerId) {
 
   const input = container.querySelector('#cli-input');
   const output = container.querySelector('#output');
+
 // Define commands
   const commands = {
     help: () => "Available commands: help, clear, echo [text], date",

@@ -5,16 +5,25 @@
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 10px #00ff00;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0.2em auto;
-  max-height: 400px;
+  max-height: 600px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
 }
 
 .cli-output p {
   margin: 0.2em 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .cli-input-line {
@@ -23,6 +32,8 @@
   padding: 0.5rem;
   display: flex;
   gap: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cli-input-line span {
@@ -37,6 +48,11 @@
   font-size: 1em;
   flex-grow: 1;
   outline: none;
+  direction: ltr;
+  unicode-bidi: normal;
+  transform: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #cli-output {
@@ -44,5 +60,12 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+}
+
+#cli-output, .cli-input-line, .cli-output p, .cli-input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 

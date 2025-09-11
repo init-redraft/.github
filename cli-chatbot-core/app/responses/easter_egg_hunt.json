@@ -1,0 +1,16 @@
+{
+    "triggers": {
+        "init-redraft": {
+            "response": "Welcome back, builder. System integrity confirmed. CRT mode unlocke.",
+            "unlock": ["crt-mode", "forensic-view"]
+        },
+        "sudo make me a sandwich": {
+            "response": "Okay, but only since you asked nicely.",
+            "unlock": []
+        },
+        "run sparky": {
+            "response": "Sparky engaged. Sarcasm levels rising...",
+            "unlock": ["sparky-mode"]
+        }
+    }
+}

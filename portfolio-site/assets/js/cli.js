@@ -58,6 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
       case "ping":
         appendOutput("Yes, I can hear you.")
         break;
+      case "status":
+        appendOutput("Modules queued for deployment:");
+        appendOutput("->Projects: 25% Complete");
+        appendOutput("->Home-Lab: 70% Complete");
+        appendOutput("->Certifications: 50% Complete");
+        appendOutput("->Blog: 90% Complete");
+        break;
       case "nmap":
         appendOutput("Scanning open ports...");
         setTimeout(() => {

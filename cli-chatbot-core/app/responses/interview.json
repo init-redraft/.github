@@ -1,0 +1,19 @@
+{
+    "questions": [
+        {
+            "category": "Behavioral",
+            "question": "Tell me about a time you had to troubleshoot a production issue under pressure.",
+            "expected_keywords": ["incident", "root cause", "communication", "resolution"]
+        },
+        {
+            "category": "Technical",
+            "question": "How would you secure a Linux server exposed to the internet?",
+            "expected_keywords": ["firewall", "fail2ban", "SSH", "patching"]
+        },
+        {
+            "category": "Situational",
+            "question": "You're handed logs showing repeated failed login attempts. What do you do?",
+            "expected_keywords": ["alert", "IP block", "log analysis", "escalation"]
+        }
+    ]
+}
