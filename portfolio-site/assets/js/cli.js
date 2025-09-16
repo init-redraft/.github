@@ -6,17 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Inject CLI HTML structure into the container
   cliContainer.innerHTML = `
   <div class="cli-output" id="cli-output">
-    <p>daniel@portfolio:~$</p>
+    <p>guest@portfolio:~$</p>
     <p>Initializing modules...</p>
     <p>Welcome to my portfolio site. System ready.</p>
     <p>Type <span class="cmd">help</span> to begin.</p>
   </div>
   <div class="cli-input-line">
-    <span>daniel@portfolio:~$</span>
-    <input type="text" class="cli-input" id="cli-input" autofocus />
+    <span>guest@portfolio:~$</span>
+    <input type="text" class="cli-input" id="cli-input" />
   </div>
 `;
-  scrollToBottom();
 
   // Reference input field and output container
   const input = document.getElementById("cli-input");
@@ -42,12 +41,36 @@ document.addEventListener("DOMContentLoaded", () => {
     // Match command and respond accordingly
     switch (cmd.toLowerCase()) {
       case "help":
-        appendOutput("Available commands: help, projects, contact, ping, clear.");
+        appendOutput("Available commands: help, fn-status, projects, contact, ping, clear.");
         appendOutput("Hint: not all commands are visible. Scan deeper.");
         break;
       case "projects":
         appendOutput("Opening projects module...");
         appendOutput("Visit /projects.html for full portfolio.");
+        break;
+      case "fn-status":
+        appendOutput("Retrieving Field Notes...");
+        setTimeout(() => {
+          appendOutput("Field Note Complete: Home-Lab: The Portable Core: Asus TUF A15");
+          appendOutput("Pending Field Notes:");
+        }, 2000);
+        setTimeout(() => {
+          appendOutput("THM: TryHackMe Platform Overview & Review");
+          appendOutput("THM: PreSecurity - Section 1 Walkthrough");
+          appendOutput("THM: PreSecurity - Section 2 Walkthrough");
+          appendOutput("Loading more...");
+        }, 3500);
+        setTimeout(() => {
+          appendOutput("Python: Mimo Platform Overview & Review");
+          appendOutput("Python: Mimo: Python Basics Section Walkthrough");
+          appendOutput("Python: Mimo: Types & Comparisons Section Walkthrough");
+          appendOutput("Loading more...");
+        }, 5000);
+        setTimeout(() => {
+          appendOutput("Home-Lab: The Home-Lab Backbone: Dell T30");
+          appendOutput("Home-Lab: Future Upgrades Planned");
+          appendOutput("This is all of the Field Notes posted or currently planned. For more information, visit the Field Notes page.")
+        }, 6500);
         break;
       case "contact":
         appendOutput("📬 Contact Information:");
@@ -63,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         appendOutput("->Projects: 25% Complete");
         appendOutput("->Home-Lab: 70% Complete");
         appendOutput("->Certifications: 50% Complete");
-        appendOutput("->Blog: 90% Complete");
+        appendOutput("->Blog: 100% Complete. Ongoing work on future blog posts continue.");
         break;
       case "nmap":
         appendOutput("Scanning open ports...");
@@ -124,9 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Utility to maintain input line in field of view
   function scrollToBottom() {
-  const container = document.getElementById("cli-terminal");
-  container.scrollTo({ top: container.scrollHeight, behavior: "smooth" });
+    const outputContainer = document.getElementById("cli-output");
+    if (outputContainer) {
+      outputContainer.scrollTop = outputContainer.scrollHeight;
+  }
 }
+
     
   // Utility to append a line of output to the terminal
   function appendOutput(text) {
