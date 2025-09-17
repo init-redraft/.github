@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>On The Anvil:/THM/LearningPath/PreSecurity/Sec1</title>
+    <title>/THM/LearningPath/PreSecurity/RM1</title>
     <meta name="keywords" content="cybersecurity, CLI portfolio, homelab, operational resilience, infosec, veteran">
     <meta name="author" content="init-redraft">
     <meta name="robots" content="index, follow">
@@ -48,72 +48,156 @@
         <div class="container"><img src="../../assets/img/init-redraft%20banner.png" width="272" height="auto"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive-2" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive-2">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item nav-link"><a class="nav-link" href="index.html" style="font-family: 'Fira Code', monospace;color: #00ff00;">/Home</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="blog.html" style="color: #00ff00;font-family: 'Fira Code', monospace;">/blog</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="../../index.html" style="font-family: 'Fira Code', monospace;color: #00ff00;">/Home</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="../../blog.html" style="color: #00ff00;font-family: 'Fira Code', monospace;">/blog</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container mt-7 mb-3" style="color: #00ff00;font-family: 'Fira Code', monospace;"><a class="btn btn-primary" role="button" href="../../blog.html" style="font-family: 'Fira Code', monospace;font-weight: bold;background: #00ff00;border-radius: 10px;color: rgb(0, 0, 0);">Home</a>
-        <h1 class="mt-2" style="font-family: 'Fira Code', monospace;font-size: 36px;">On The Anvil:/THM/LearningPath/PreSecurity/Sec1</h1>
+        <h1 class="mt-2" style="font-family: 'Fira Code', monospace;font-size: 36px;">/THM/LearningPath/PreSecurity/RM1</h1>
         <div class="d-flex flex-wrap gap-2" data-bss-type="author-loop">
             <div class="author-init-redraft" data-bss-type="author-loop-item"><span>init-redraft</span></div>
         </div><time datetime="2025-09-14">Sep 14, 2025</time>
-        <p>PreSecurity Section 1 covers three rooms: Offensive Security Intro, Defensive Security Intro, and Careers in Cyber. On the surface, they’re foundational. But beneath that, they offer a framing device—a way to understand the duality of the field. Offense teaches you how systems break. Defense teaches you how they’re made whole. And the career room reminds you that this isn’t just a technical discipline—it’s a human one.</p>
-        <div class="d-flex flex-wrap gap-1 mb-3" data-bss-type="tag-loop"><span class="tag-field-note" data-bss-type="tag-loop-item"><span class="badge bg-primary"><span>Field Notes</span></span></span><span class="tag-thm" data-bss-type="tag-loop-item"><span class="badge bg-primary"><span>TryHackMe</span></span></span></div><img class="img-fluid" width="1301" height="599" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T1.png">
-        <h2 class="text-start" style="font-family: 'Fira Code', monospace;">Task 1: What is offensive Security - Observations</h2>
-        <p>This task introduces the foundational concept of offensive security: that by understanding how adversaries think, we can better anticipate, detect, and counter their efforts. It’s not just about attacking systems, it’s about cultivating a mindset that sees through them. When you learn to think like a hacker, you gain the ability to proactively identify bugs, exploits, and architectural weaknesses in your own environment.</p>
-        <p class="text-center" style="font-size: 22px;"><strong>Harden, test, &nbsp;iterate, and repeat.</strong></p>
-        <p>Coming from a decade in risk management, this resonates deeply. In that world, I often conducted inspections (or coordinated with<br> specialists) to assess physical and operational exposures. The process required deep understand of the threat: imagining how a worker might be injured by a machine, how a hazard might propagate through a facility, or how a liability might emerge from a seemingly innocuous detail. You had to think like the incident before it happened.</p>
-        <p>Offensive security is no different. It’s the practice of stepping into the adversary’s shoes (not to cause harm) but to understand how<br> harm occurs. That understanding becomes the blueprint for resilient security.<br><br></p>
-        <h2 class="text-start" style="font-family: 'Fira Code', monospace;">Task 2: Starting the Lab</h2>
-        <h3 class="text-start" style="font-family: 'Fira Code', monospace;">Observation</h3><img class="img-fluid d-flex" width="651" height="756" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T2.png">
-        <p>This task introduces the TryHackMe lab environment and the use of AttackBoxes, remote virtual machines that allow you to interact with simulated targets directly from your browser. These will be your primary interface throughout the PreSecurity path and beyond.<br><br>While later rooms offer the option to connect via OpenVPN, the platform recommends using the built-in AttackBox unless you're already comfortable establishing remote connections. For most learners, the browser-based approach provides a simplified entry point into hands-on cyber security work.<br><br>The room includes a simple challenge: accessing a fake banking web app and retrieving our account number.</p>
+        <p class="blog-body-text">PreSecurity Section 1 covers three rooms: Offensive Security Intro, Defensive Security Intro, and Careers in Cyber. On the surface, they’re foundational. But beneath that, they offer a framing device—a way to understand the duality of the field. Offense teaches you how systems break. Defense teaches you how they’re made whole. And the career room reminds you that this isn’t just a technical discipline—it’s a human one.</p>
+        <div class="d-flex flex-wrap gap-1 mb-3" data-bss-type="tag-loop"><span class="tag-field-note" data-bss-type="tag-loop-item"><span class="badge" style="background: #00ff00;"><span style="color: var(--bs-black);">Field Notes</span></span></span><span class="tag-thm" data-bss-type="tag-loop-item"><span class="badge" style="background: #00ff00;"><span style="color: var(--bs-black);">TryHackMe</span></span></span></div><img class="img-fluid" width="1301" height="599" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T1.png">
+    </div>
+    <section>
+        <div class="container">
+            <div>
+                <h2 class="blog-body-heading">Offensive Security Intro</h2>
+                <h2 class="text-start blog-body-heading">Task 1: What is offensive Security - Observations</h2>
+                <p class="blog-body-text">This task introduces the foundational concept of offensive security: that by understanding how adversaries think, we can better anticipate, detect, and counter their efforts. It’s not just about attacking systems, it’s about cultivating a mindset that sees through them. When you learn to think like a hacker, you gain the ability to proactively identify bugs, exploits, and architectural weaknesses in your own environment.</p>
+                <p class="text-center blog-body-heading" style="font-size: 22px;"><strong>Harden, test, iterate, and repeat.</strong></p>
+                <p class="blog-body-text">Coming from a decade in risk management, this resonates deeply. In that world, I often conducted inspections (or coordinated with<br> specialists) to assess physical and operational exposures. The process required deep understand of the threat: imagining how a worker might be injured by a machine, how a hazard might propagate through a facility, or how a liability might emerge from a seemingly innocuous detail. You had to think like the incident before it happened.</p>
+                <p class="blog-body-text">Offensive security is no different. It’s the practice of stepping into the adversary’s shoes (not to cause harm) but to understand how<br> harm occurs. That understanding becomes the blueprint for resilient security.<br><br></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div>
+                <h2 class="text-start blog-body-heading">Task 2: Starting the Lab</h2>
+                <h3 class="text-start blog-body-heading">Observation</h3><img class="img-fluid d-flex" width="651" height="756" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T2.png">
+                <p class="blog-body-text">This task introduces the TryHackMe lab environment and the use of AttackBoxes, remote virtual machines that allow you to interact with simulated targets directly from your browser. These will be your primary interface throughout the PreSecurity path and beyond.<br><br>While later rooms offer the option to connect via OpenVPN, the platform recommends using the built-in AttackBox unless you're already comfortable establishing remote connections. For most learners, the browser-based approach provides a simplified entry point into hands-on cyber security work.<br><br>The room includes a simple challenge: accessing a fake banking web app and retrieving our account number.</p>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div>
+                <h3 class="blog-body-heading">Task 2:&nbsp;Walkthrough</h3>
+                <ul class="list-unstyled">
+                    <li class="blog-body-text"><strong>Objective:&nbsp;</strong>Retrieve Account Number from FakeBank Web Application.</li>
+                    <li class="blog-body-text"><strong>Tools/Resources Used: </strong>Laptop, Internet Connection, Virtual Machine (Vendor).</li>
+                    <li class="blog-body-text"><strong>Est. Time To Completion: </strong>3 Minutes</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5" style="color: #00ff00;font-family: 'Fira Code', monospace;">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="rounded img-fluid object-fit-scale w-100" width="1901" height="939" style="min-height: 300px;width: 100%;height: 100%;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T2.Step%201.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <h2 class="text-uppercase fw-bold blog-body-heading">Step 1:</h2>
+                        <p class="my-3 blog-body-text">To begin, click the <strong>“Start Machine”</strong> button at the top of Task 2. This will launch a split-screen interface, course content on the left, a GUI-driven remote machine on the right.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="rounded img-fluid object-fit-cover w-100" style="min-height: 300px;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T2.Step%202.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <h2 class="text-uppercase fw-bold blog-body-heading">Step 2:</h2>
+                        <p class="my-3 blog-body-text">Once the machine fully boots (this can take a minute) the screen should already come up with the bank app.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5" style="color: #00ff00;font-family: 'Fira Code', monospace;">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="rounded img-fluid object-fit-cover w-100" style="min-height: 300px;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T2.Step%203.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <h2 class="text-uppercase fw-bold blog-body-heading">Step 3:</h2>
+                        <p class="my-3 blog-body-text">Answer the following question. “What is your bank account number in the FakeBank web application?” The answer is displayed on the top left corner of the virtual machines browser. I have highlighted it in my photo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div>
+                <h2 class="blog-body-heading">Task 3: Your First Hack</h2>
+                <h3 class="blog-body-heading">Observation</h3><img class="img-fluid" width="1740" height="936" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T3.png">
+                <p class="blog-body-text">This task nudges you outside the comfort zone—especially if you're new to the command line. While the challenge includes the expected output, I strongly recommend running the command yourself. Every terminal interaction builds fluency, and the CLI is a space you’ll need to navigate with confidence</p>
+                <p class="blog-body-text">The scenario assumes you already have an account with the target bank. In real-world web development, it’s common for builders to leave behind unlinked or draft pages—URLs not exposed in the main site navigation but still accessible if you know where to look.</p>
+                <p class="blog-body-text">Here, we’ll use a tool called <strong>dirb</strong>. It brute-forces common directory and file names against a target URL using a prepopulated wordlist. If it finds a match, it returns the result in your terminal.</p>
+                <p class="blog-body-text">In this case, dirb reveals two hidden paths:</p>
+                <ul class="list-unstyled">
+                    <li class="blog-body-text">http://fakebank.thm/bank-deposit</li>
+                    <li class="blog-body-text">http://fakebank.thm/images</li>
+                </ul>
+                <p class="blog-body-text">⚠️ <strong>Note</strong>: Dirb relies on its wordlist. If a hidden page uses an uncommon name, it may not be discovered. This is why understanding web logic and manual enumeration still matter.</p>
+                <p class="blog-body-text">The remainder of the task breaks down the dirb output and its implications. To complete the challenge, you’re asked:</p>
+                <p class="blog-body-text">“Dirb should have found two hidden URLs. One of them is <a href="https://fakebank.thm/images">http://fakebank.thm/images</a>. What is the other one?”</p>
+                <p class="blog-body-text">Refer to your terminal output—or the image above—and you’ll find the answer is</p><code style="color: #00ff00;font-size: 24px;">http://fakebank.thm/bank-deposit</code>
+            </div>
+        </div>
         <hr>
-        <h3 style="font-family: 'Fira Code', monospace;">Walkthrough</h3>
-        <ul class="list-unstyled">
-            <li><strong>Objective:</strong>&nbsp;Retrieve Account Number from FakeBank Web Application.</li>
-            <li><strong>Tools/Resources Used: </strong>Laptop, Internet Connection, Virtual Machine (Vendor).</li>
-            <li><strong>Est. Time To Completion: </strong>3 Minutes</li>
-        </ul>
-    </div>
-    <div class="container py-4 py-xl-5" style="color: #00ff00;font-family: 'Fira Code', monospace;">
-        <div class="row gy-4 gy-md-0">
-            <div class="col-md-6"><img class="rounded img-fluid object-fit-scale w-100" width="1901" height="939" style="min-height: 300px;width: 100%;height: 100%;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T2.Step%201.png"></div>
-            <div class="col-md-6 d-md-flex align-items-md-center">
-                <div style="max-width: 350px;">
-                    <h2 class="text-uppercase fw-bold" style="font-family: 'Fira Code', monospace;">Step 1:</h2>
-                    <p class="my-3">To begin, click the <strong>“Start Machine”</strong> button at the top of Task 2. This will launch a split-screen interface, course content on the left, a GUI-driven remote machine on the right.</p>
+    </section>
+    <section>
+        <div class="container">
+            <div>
+                <h2 class="blog-body-heading">Task 4: Adding Funds To Your Account</h2>
+                <p class="blog-body-text">This task introduces a multi-step exploit using an exposed webform. While simple in execution, it reinforces key concepts: <strong>URL manipulation</strong>, <strong>form exploitation</strong>, and <strong>response observation</strong>.</p>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="rounded img-fluid object-fit-cover w-100" style="min-height: 300px;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T4.Step1.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <h2 class="text-uppercase fw-bold blog-body-heading">Step 1:</h2>
+                        <p class="my-3 blog-body-text">In this step you will need to navigate to the unsecure deposit page that we identified in the previous task. You can do this by amending the URL in the address bar of the browser in the VM. Simply add "/bank-deposit" to the end.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container py-4 py-xl-5" style="font-family: 'Fira Code', monospace;color: #00ff00;">
-        <div class="row gy-4 gy-md-0">
-            <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
-                <div style="max-width: 350px;">
-                    <h2 class="text-uppercase fw-bold" style="font-family: 'Fira Code', monospace;">Step 2:</h2>
-                    <p class="my-3">Once the machine fully boots (this can take a minute) the screen should already be up with the bank app.&nbsp;</p>
-                </div>
-            </div>
-            <div class="col-md-6"><img class="rounded img-fluid object-fit-cover w-100" style="min-height: 300px;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T2.Step%202.png"></div>
-        </div>
-    </div>
-    <div class="container py-4 py-xl-5" style="color: #00ff00;font-family: 'Fira Code', monospace;">
-        <div class="row gy-4 gy-md-0">
-            <div class="col-md-6"><img class="rounded img-fluid object-fit-cover w-100" style="min-height: 300px;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T2.Step%203.png"></div>
-            <div class="col-md-6 d-md-flex align-items-md-center">
-                <div style="max-width: 350px;">
-                    <h2 class="text-uppercase fw-bold" style="font-family: 'Fira Code', monospace;">Step 3:</h2>
-                    <p class="my-3">Answer the following question. “What is your bank account number in the FakeBank web application?” The answer is displayed on the top left corner of the virtual machines browser. I have highlighted it in my photo.</p>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="rounded img-fluid object-fit-cover w-100" style="min-height: 300px;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T4.Step2.png"><img class="rounded img-fluid object-fit-cover w-100" style="min-height: 300px;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T4.Step3.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <h2 class="text-uppercase fw-bold blog-body-heading">Step 2:</h2>
+                        <p class="my-3 blog-body-text">Once on the page, you’ll see a basic webform allowing you to deposit funds into a specified account. Select the account identified in Task 2 (8881) and enter the deposit amount specified in the instructions—<strong>$2,000</strong>.<br>Click the <strong>“Deposit Money”</strong> button to submit the form.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container" style="color: #00ff00;font-family: 'Fira Code', monospace;">
-        <h1 style="font-family: 'Fira Code', monospace;">Summary:</h1>
-        <p>This is a straightforward exercise, but it provides a pace setting moment: while this course does include quite a bit of passive reading we must be actively engaged to master the content. We aren’t just learning about cyber security, we’re stepping into the lab and interacting with simulated systems.<br><br><br></p>
-    </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="img-fluid" width="1865" height="785" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T4.Step4.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <h2 class="text-uppercase fw-bold blog-body-heading">Step 3:</h2>
+                        <p class="my-3 blog-body-text">After submission, click <strong>“Return to Account”</strong>. You’ll be redirected to your account dashboard, now showing the updated balance and a celebratory modal.<br>Inside the modal is the <strong>secret phrase</strong> required to complete Task 4. Copy this phrase and enter it into the TryHackMe interface to finish the room.<br><br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section>
+        <div class="container" style="color: #00ff00;font-family: 'Fira Code', monospace;">
+            <h2 class="blog-body-heading">Summary:</h2>
+            <p class="blog-body-text">This is a straightforward exercise, but it provides a pace setting moment: while this course does include quite a bit of passive reading we must be actively engaged to master the content. We aren’t just learning about cyber security, we’re stepping into the lab and interacting with simulated systems.</p>
+        </div>
+    </section>
     <footer class="text-center" data-bs-theme="dark" style="height: 1;">
         <div class="container py-4 py-lg-5" style="color: var(--bs-white);">
             <ul class="list-inline" style="color: var(--bs-white);">
@@ -142,6 +226,7 @@
                     <li onclick="toggleFolder(&#39;thm&#39;, event, [&#39;FieldNotes&#39;, &#39;THM&#39;])">../THM<ul class="list-unstyled hidden" id="thm">
                             <li><a href="/Blog_Posts/THM%20Posts/THM%20Post%201.html" target="_blank">../THM/WebApp/Overview</a></li>
                             <li><a href="/Blog_Posts/THM%20Posts/THM%20Post%202.html" target="_blank">../THM/Room_1</a></li>
+                            <li><a href="/Blog_Posts/THM%20Posts/THM%20Post%203.html" target="_blank">../THM/Room_2</a></li>
                         </ul>
                     </li>
                     <li onclick="toggleFolder(&#39;home_lab&#39;, event, [&#39;FieldNotes&#39;, &#39;HomeLab&#39;])">../Home_Lab</li>

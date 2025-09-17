@@ -1,0 +1,40 @@
+{
+  "ls": {
+    "field-notes": {
+        "thm": {
+            "overview": "Field Note: THM Site Overview - A comprehensive overview of the TryHackMe platform. If anyone really cares.",
+            "room_1": "Field Note: THM Room_1 - An in-depth walkthrough of Room_1, covering key concepts, challenges, and solutions...seriously? This is room one. Why is he bothering with this?",
+            "room_2": "Field Note: THM Room_2 - A detailed analysis of Room_2. Seriously, why is he taking the time to write these? Nobody reads his blog and honestly this is the very beginning stuff."
+        },
+        "home-lab": {
+            "the_portable_core_asus_tuf_a15": "Field Note: Home-Lab: The Portable Core: Asus TUF A15 - It's a laptop he bought at staples and installed some stuff in and on it. Big whoop."
+        },
+        "python": {
+            "mimo_overview": "Coming soon:...Ooooh he is going to tell you all about how to make a variable statement. Riveting stuff.",
+            "Learn_python_the_hard_way": "Coming soon: He actually bought a book to learn python the hard way. Because that is what normal people do."
+        }
+    }
+  },
+  "website status": [
+    "Modules queued for deployment: - I'm just a chatbot.",
+    "->Projects: 25% Complete - Progress is happening. Just not fast enought to impress anyone.",
+    "->Home-Lab: 70% Complete - He calls it modular. His wife calls it a fire hazard.",
+    "->Certifications: 50% Complete - He is halfway to proving he knows stuff. or at least pretending convincingly.",
+    "->Blog: 100% Complete. Ongoing work on future blog posts continue. - He is just writing this to fill space."
+    ],
+  "nmap": [
+    { "text": "Scanning open ports... (does he really think anyone is fooled by this?)", "delay": 0},
+    { "text": "Port 22: ssh (uh oh a fake port is open.)", "delay": 2000},
+    { "text": "Port 80: http (ohhh look another fake port for his fake nmap.)", "delay": 2500},
+    { "text": "port 1337: ??? (Seriously, this is lame.)", "delay": 3000},
+    { "text": "Payload detected. Try: whoami, sudo make me a sandwich, hack the planet, coffee, upupdowndownleftrightleftrightba, ascii_art. (Payload, really? When does Skynet get here?)", "delay": 3500},
+    { "text": "", "delay": 4000},
+    { "text": "This is all of the commands...or is it. Curiosity might be rewarded. (Dude, just tell them what commands they can use so they can test your system and still not hire you.)", "delay": 4500}
+    ],
+    "contact": [
+    "📬 Contact Information:",
+    "Email   : init-redraft@protonmail.com (He uses protonmail because he is super secretive I guess?)",
+    "GitHub  : https://github.com/init-redraft (He really thinks you are going to go to his github?)",
+    "Website : https://init-redraft.com (Did he really just give you the URL to the website you are already on?)"
+    ]
+}

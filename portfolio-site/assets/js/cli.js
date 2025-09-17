@@ -41,8 +41,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // Match command and respond accordingly
     switch (cmd.toLowerCase()) {
       case "help":
-        appendOutput("Available commands: help, fn-status, projects, contact, ping, clear.");
+        appendOutput("Available commands: help, ls, fn-status, projects, contact, ping, clear.");
         appendOutput("Hint: not all commands are visible. Scan deeper.");
+        break;
+      case "ls":
+        appendOutput("field-notes");
+        break;
+      case "ls /field-notes":
+        appendOutput("THM, Home-Lab, Python");
+        break;
+      case "ls /field-notes/thm":
+        appendOutput("Overview, Room_1, Room_2");
+        break;
+      case "ls /field-notes/home-lab":
+        appendOutput("The Portable Core: Asus TUF A15");
+        break;
+      case "ls /field-notes/python":
+        appendOutput("***Directory Empty***")
         break;
       case "projects":
         appendOutput("Opening projects module...");
@@ -52,12 +67,13 @@ document.addEventListener("DOMContentLoaded", () => {
         appendOutput("Retrieving Field Notes...");
         setTimeout(() => {
           appendOutput("Field Note Complete: Home-Lab: The Portable Core: Asus TUF A15");
+          appendOutput("Home-Lab: The Portable Core: Asus TUF A15");
+          appendOutput("THM: Site Overview");
+          appendOutput("THM: Room_1");
+          appendOutput("THM: Room_2");
           appendOutput("Pending Field Notes:");
         }, 2000);
         setTimeout(() => {
-          appendOutput("THM: TryHackMe Platform Overview & Review");
-          appendOutput("THM: PreSecurity - Section 1 Walkthrough");
-          appendOutput("THM: PreSecurity - Section 2 Walkthrough");
           appendOutput("Loading more...");
         }, 3500);
         setTimeout(() => {
@@ -115,13 +131,13 @@ document.addEventListener("DOMContentLoaded", () => {
             appendOutput("Cheat mode unlocked. All modules now run in God Mode. Just kidding. You still have to earn it.")
         break;
       case "ascii_art":
-            appendOutput("Generating ASCII art... \n" +
-            "      .--.      .--.\n" +
-            "     /    \\    /    \\\n" +
-            "    |  ()  |  |  ()  |\n" +
-            "     \\    /    \\    /\n" +
-            "      `--'      `--'\n" +
-            "   (Not much, but hey, it's something!)");
+            appendOutput("Generating ASCII art... \n");
+            appendOutput("      .--.      .--.\n");
+            appendOutput("     /    \\    /    \\\n");
+            appendOutput("    |  ()  |  |  ()  |\n")
+            appendOutput("     \\    /    \\    /\n")
+            appendOutput("      `--'      `--'\n")
+            appendOutput("   (Not much, but hey, it's something!)");
         break;
       case "test":
         appendOutput("Do you really doubt my code works?");

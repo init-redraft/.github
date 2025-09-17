@@ -1,0 +1,40 @@
+{
+  "ls": {
+    "field-notes": {
+        "thm": {
+            "overview": "Field Note: THM Site Overview - A comprehensive overview of the TryHackMe platform, its features, and how to navigate it effectively.",
+            "room_1": "Field Note: THM Room_1 - An in-depth walkthrough of Room_1, covering key concepts, challenges, and solutions.",
+            "room_2": "Field Note: THM Room_2 - A detailed analysis of Room_2, highlighting important lessons learned and practical applications."
+        },
+        "home-lab": {
+            "the_portable_core_asus_tuf_a15": "Field Note: Home-Lab: The Portable Core: Asus TUF A15 - An exploration of building a portable home lab using the Asus TUF A15 laptop, including hardware specs, setup, and use cases."
+        },
+        "python": {
+            "mimo_overview": "Coming soon: Mimo Platform Overview & Review",
+            "Learn_python_the_hard_way": "Coming soon: Learn Python The Hard Way"
+        }
+    }
+  },
+  "website status": [
+    "Modules queued for deployment:",
+    "->Projects: 25% Complete",
+    "->Home-Lab: 70% Complete",
+    "->Certifications: 50% Complete",
+    "->Blog: 100% Complete. Ongoing work on future blog posts continue."
+    ],
+  "nmap": [
+    { "text": "Scanning open ports...", "delay": 0},
+    { "text": "Port 22: ssh", "delay": 2000},
+    { "text": "Port 80: http", "delay": 2500},
+    { "text": "port 1337: ???", "delay": 3000},
+    { "text": "Payload detected. Try: whoami, sudo make me a sandwich, hack the planet, coffee, upupdowndownleftrightleftrightba, ascii_art.", "delay": 3500},
+    { "text": "", "delay": 4000},
+    { "text": "This is all of the commands...or is it. Curiosity might be rewarded.", "delay": 4500}
+    ],
+    "contact": [
+    "📬 Contact Information:",
+    "Email   : init-redraft@protonmail.com",
+    "GitHub  : https://github.com/init-redraft",
+    "Website : https://init-redraft.com"
+    ]
+}

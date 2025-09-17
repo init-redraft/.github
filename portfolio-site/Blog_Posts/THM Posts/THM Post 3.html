@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>On The Anvil:/THM/LearningPath/PreSecurity/Sec2</title>
+    <title>/THM/LearningPath/PreSecurity/RM2</title>
     <meta name="keywords" content="cybersecurity, CLI portfolio, homelab, operational resilience, infosec, veteran">
     <meta name="author" content="init-redraft">
     <meta name="robots" content="index, follow">
@@ -18,8 +18,8 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="init-redraft: Portfolio Website">
     <meta name="twitter:description" content="This isn’t just a portfolio—it’s a perimeter. Modular systems, resilient logic, and a mission to protect what matters most.">
-    <meta name="description" content="Moooo cow grass grass herd print moooooo bovine moooooo cow udders shake moostash grass bovine cattle moooooooooo moooo udders herd moo cow dairy moooooooooo moostash shake udders moooo moooo moostash moostash moo moooooo milk dairy moo bull moo udders udders cattle bovine udders milk moooooo bovine moooo bull print milk">
-    <meta property="og:image" content="../../assets/img/Blog%20Pictures/custom%20blog%20post%20pla.png">
+    <meta name="description" content="PreSecurity Section 1 covers three rooms: Offensive Security Intro, Defensive Security Intro, and Careers in Cyber. On the surface, they’re foundational. But beneath that, they offer a framing device—a way to understand the duality of the field. Offense teaches you how systems break. Defense teaches you how they’re made whole. And the career room reminds you that this isn’t just a technical discipline—it’s a human one.">
+    <meta property="og:image" content="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T1.png">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../../assets/img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicons/favicon-16x16.png" media="(prefers-color-scheme: dark)">
@@ -48,22 +48,228 @@
         <div class="container"><img src="../../assets/img/init-redraft%20banner.png" width="272" height="auto"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive-2" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive-2">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item nav-link"><a class="nav-link" href="index.html" style="font-family: 'Fira Code', monospace;color: #00ff00;">/Home</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="blog.html" style="color: #00ff00;font-family: 'Fira Code', monospace;">/blog</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="../../index.html" style="font-family: 'Fira Code', monospace;color: #00ff00;">/Home</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="../../blog.html" style="color: #00ff00;font-family: 'Fira Code', monospace;">/blog</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container mt-7 mb-3" style="color: #00ff00;"><a class="btn btn-primary" role="button" href="../../blog.html" style="font-family: 'Fira Code', monospace;font-weight: bold;background: #00ff00;border-radius: 10px;color: rgb(0, 0, 0);">Home</a>
-        <h1 class="mt-2">On The Anvil:/THM/LearningPath/PreSecurity/Sec2</h1>
+    <div id="sidebar">
+        <div id="breadcrumb" class="breadcrumb"></div>
+        <h3>/File System</h3>
+        <ul class="list-unstyled">
+            <li onclick="toggleFolder(&#39;fieldnotes&#39;, event, [&#39;FieldNotes&#39;])">../FieldNotes<ul class="list-unstyled hidden" id="fieldnotes">
+                    <li onclick="toggleFolder(&#39;thm&#39;, event, [&#39;FieldNotes&#39;, &#39;THM&#39;])">../THM<ul class="list-unstyled hidden" id="thm">
+                            <li><a href="/Blog_Posts/THM%20Posts/THM%20Post%201.html" target="_blank">../THM/WebApp/Overview</a></li>
+                            <li><a href="/Blog_Posts/THM%20Posts/THM%20Post%202.html" target="_blank">../THM/Room_1</a></li>
+                            <li><a href="/Blog_Posts/THM%20Posts/THM%20Post%203.html" target="_blank">../THM/Room_2</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleFolder(&#39;home_lab&#39;, event, [&#39;FieldNotes&#39;, &#39;HomeLab&#39;])">../Home_Lab</li>
+                    <li onclick="toggleFolder(&#39;python&#39;, event)">../Python</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="file-icon" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-folder">
+            <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"></path>
+        </svg></div>
+    <div class="container mt-7 mb-3" style="color: #00ff00;font-family: 'Fira Code', monospace;"><a class="btn btn-primary" role="button" href="../../blog.html" style="font-family: 'Fira Code', monospace;font-weight: bold;background: #00ff00;border-radius: 10px;color: rgb(0, 0, 0);">Home</a>
+        <h1 class="mt-2" style="font-family: 'Fira Code', monospace;font-size: 36px;">/THM/LearningPath/PreSecurity/RM2</h1>
         <div class="d-flex flex-wrap gap-2" data-bss-type="author-loop">
             <div class="author-init-redraft" data-bss-type="author-loop-item"><span>init-redraft</span></div>
-        </div><time datetime="2025-09-05">Sep 5, 2025</time>
-        <p>Moooo cow grass grass herd print moooooo bovine moooooo cow udders shake moostash grass bovine cattle moooooooooo moooo udders herd moo cow dairy moooooooooo moostash shake udders moooo moooo moostash moostash moo moooooo milk dairy moo bull moo udders udders cattle bovine udders milk moooooo bovine moooo bull print milk</p><img class="img-fluid" width="1024" height="1024" src="../../assets/img/Blog%20Pictures/custom%20blog%20post%20pla.png">
-        <p>Erat dui porta quisque habitant habitasse duis eros, ultrices facilisis ac. Turpis etiam mattis justo, in elementum feugiat nibh dui.</p>
-        <p>Eros tristique odio inceptos nisl. Tempus mauris cubilia sapien congue ad, orci feugiat tristique. Quis scelerisque habitant purus, porttitor placerat.</p>
-        <p>Eget quam curae velit, eu potenti quam. Nostra turpis pellentesque malesuada diam leo amet feugiat per, leo vestibulum. Donec sodales.</p>
+        </div><time datetime="2025-09-14">Sep 14, 2025</time>
+        <p class="blog-body-text">PreSecurity Section 1 covers three rooms: Offensive Security Intro, Defensive Security Intro, and Careers in Cyber. On the surface, they’re foundational. But beneath that, they offer a framing device—a way to understand the duality of the field. Offense teaches you how systems break. Defense teaches you how they’re made whole. And the career room reminds you that this isn’t just a technical discipline—it’s a human one.</p>
+        <div class="d-flex flex-wrap gap-1 mb-3" data-bss-type="tag-loop"><span class="tag-field-note" data-bss-type="tag-loop-item"><span class="badge" style="background: #00ff00;"><span style="color: var(--bs-black);">Field Notes</span></span></span><span class="tag-thm" data-bss-type="tag-loop-item"><span class="badge" style="background: #00ff00;"><span style="color: var(--bs-black);">TryHackMe</span></span></span></div><img class="img-fluid" width="1301" height="599" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM1/THM.PreSec.RM1.T1.png">
     </div>
+    <section>
+        <div class="container">
+            <div>
+                <h2 class="blog-body-heading">Defensive Security Intro</h2>
+                <p class="blog-body-text">This room introduces us to the two core objectives of defensive security.</p>
+                <ol>
+                    <li class="blog-body-text">Prevent Intrusions before they occur.</li>
+                    <li class="blog-body-text">Detect and Respond effectively when they do.</li>
+                </ol>
+                <p class="blog-body-text">To achieve these objectives, organizations must adopt a layered strategy that includes:</p>
+                <ul class="blog-body-text">
+                    <li class="blog-body-text">Training users to recognize and report suspicious behavior.</li>
+                    <li class="blog-body-text">Document and manage assets thoroughly.</li>
+                    <li class="blog-body-text">Deploy preventative security controls across systems and networks.</li>
+                    <li class="blog-body-text">Logging and monitoring all activity for anomalous behavior and threats.</li>
+                    <li class="blog-body-text">Crafting security policies that reinforce the CIA Triad—ensuring sensitive data remains protected (Confidentiality), unaltered (Integrity), and reliably accessible to authorized users (Availability).</li>
+                </ul>
+                <p class="blog-body-text">Honestly, while Red Team tactics spark my creativity, it’s the structure and mission of the Blue Team that resonate at a deeper level. My background in the military, insurance, and risk management aligns naturally with the defender’s role:&nbsp;understanding systems, establishing policy, and monitoring for threats. It’s not just a technical discipline; it’s a philosophy of resilience that mirrors how I approach the challenges in my own life.</p>
+                <p class="text-center blog-body-heading" style="font-size: 22px;"><strong>Harden, test, iterate, and repeat.</strong></p>
+                <p class="blog-body-text">This is the rhythm of a defender. The following tasks walk through the foundational elements of defensive security. From SOC Operations to Digital Forensics and Incident Response, each one reinforces the mission: Confidentiality, Integrity and Availability.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div>
+                <h2 class="text-start blog-body-heading">Task 1: Introduction to Defensive Security</h2>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6 d-flex align-items-center"><img class="rounded img-fluid object-fit-scale w-100" style="min-height: 300px;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM2/THM.PreSec.RM2.T1.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <p class="my-3 blog-body-text">This task is an introduction to the room. Here they cover the key objectives of Defensive Security. In order to move to the next task we will need to answer the following question.<br><br><span style="text-decoration: underline;">"Which Team focuses on defensive security?"</span><br>This is answered in the second paragraph of text on this page. The <strong><em>"Blue Team" </em></strong>focuses on defensive security.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section>
+        <div class="container">
+            <div>
+                <h2 class="text-start blog-body-heading">Task 2: Exploring the SOC</h2>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6 d-flex align-items-center"><img class="rounded img-fluid object-fit-scale w-100" style="min-height: 300px;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM2/THM.PreSec.RM2.T2.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <p class="my-3 blog-body-text">In this task we are introduced to the concept of a Security Operations Center (SOC). This is a team of cyber security professionals primarily tasked with monitoring networks and systems for security events.<br><br>The SOC Team is responsible for;</p>
+                        <ul class="blog-body-text">
+                            <li class="blog-body-text">Keeping up to date with Cyber Security Trends</li>
+                            <li class="blog-body-text">Monitoring for policy adherence</li>
+                            <li class="blog-body-text">Investigating devations from baseline activity for unauthorized or illegal activity</li>
+                            <li class="blog-body-text">Intrusion and Breach Detection</li>
+                        </ul>
+                        <p class="blog-body-text">In order to complete this task we need to answer the following question.&nbsp;<br><br><span style="text-decoration: underline;">"What would you call a team of Cyber Security Professionals who monitor a network and its systems for malicious events?"</span><br>The answer is in the text. <em>"Security Operations Centre"</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section>
+        <div class="container">
+            <div>
+                <h2 class="blog-body-heading">Task 3: Digital Forensics</h2>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5" style="color: #00ff00;font-family: 'Fira Code', monospace;">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6 d-flex align-items-center"><img class="rounded img-fluid object-fit-scale w-100" width="977" height="440" style="min-height: 300px;width: 100%;height: 100%;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM2/THM.PreSec.RM2.T3.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <p class="my-3 blog-body-text">This task introduces us to the concept of digital forensics. Digital forensics is the use of traditional forensics in the digital realm. It utilizes tools and methods to collect, preserve and analyze digital evidence. This is then utilized in the investigation of incidents and security breaches.&nbsp;<br><br>THM provides us with four areas that digital forensics specifically looks into; File Systems, System Memory, System Logs, Network Logs.&nbsp;<br><br>In order to complete this task, you will need to answer the following question.&nbsp;<br><br><span style="text-decoration: underline;">"An attacker deploys a piece of malicious code that does not save to the disk. What digital forensics technique would you use in this instance?"</span><br>The answer is in the information cards on the page.&nbsp;<br><br><em>"System Memory"</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section>
+        <div class="container">
+            <div>
+                <h2 class="blog-body-heading">Task 4: Incident Response</h2>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div></div>
+        </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6 d-flex align-items-center"><img class="rounded img-fluid object-fit-scale d-flex w-100" style="min-height: 300px;" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM2/THM.PreSec.RM2.T4.png" width="546" height="495"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <p class="my-3 blog-body-text">Task 4 introduces us to the concept of incident response. Incident Response (IR) teams work begins long before an incident occurs. They are responsible for creating and/or implementing the resources and frameworks necessary to handle an incident appropriately before it begins.&nbsp;<br><br>Once an incident occurs, they utilize those tools and frameworks to; detect incidents and asses their scope.&nbsp;</p>
+                        <ul>
+                            <li class="blog-body-text">Detect Incidents and assess scope</li>
+                            <li class="blog-body-text">Contain the threat, eradicate the threat and recover lost data/restore affected services.</li>
+                        </ul>
+                        <p class="blog-body-text">Once the incident has been managed, they then begin the post incident review. Here they identify how the incident occurred, how their handling of the incident went and what can be learned from the entire process.<br><br>In order to complete this task you will need to answer the following question.&nbsp;<br><br><span style="text-decoration: underline;">"What phase of the incident response process involves providing "cyber awareness" training to employees?"</span><br>This is answered in the incident response process cards.&nbsp;<br><br><em>"Preparation"</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section>
+        <div class="container" style="color: #00ff00;font-family: 'Fira Code', monospace;">
+            <div>
+                <h2 class="blog-body-heading">Task 5: Practical Example of Defensive Security</h2>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="img-fluid object-fit-scale" width="1894" height="852" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM2/THM.PreSec.RM2.T5.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <p class="my-3 blog-body-text">The final task of this room is a bit of a roleplay. Here we are introduced to our first Defensive Security tool, the Security Information and Event Management (SIEM) tool. This tool gathers system information from various sources and aggregates them under a single dashboard.&nbsp;<br><br>In this instance the SIEM has flagged a suspicious unauthorized access attempt.&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="img-fluid object-fit-scale" width="1902" height="863" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM2/THM.PreSec.RM2.T5.Step2.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <p class="my-3 blog-body-text">Your first step is to take the IP address from the SIEM dashboard and run it through the integrated IP Scanner that is in the next tab over. The IP Scanner will compare the IP address against a list of known malicious addresses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="img-fluid object-fit-scale" width="1894" height="868" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM2/THM.PreSec.RM2.T5.Step3.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <p class="my-3 blog-body-text">The IP Address will return as a known bad address. Your next step will be to block the address. However, you will not be able to do so without escalating it. Click on the Next Button to access the escalation menu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="img-fluid object-fit-scale" width="1902" height="866" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM2/THM.PreSec.RM2.T5.Step4.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <p class="my-3 blog-body-text">Here you are presented with several options to choose from in order to escalate. Based on the titles provided, the most logical person to escalate this too would be the SOC Team Lead. Go ahead and highlight that person and click on the escalate button.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="img-fluid object-fit-scale" width="1906" height="856" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM2/THM.PreSec.RM2.T5.Step5.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <p class="my-3 blog-body-text">Once you escalate the screen will automatically change to the Firewall. Here you will enter the known malicious IP address and select "Block IP Address".&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6"><img class="img-fluid object-fit-scale" width="1901" height="856" src="../../assets/img/Blog%20Pictures/THM/PreSec/RM2/THM.PreSec.RM2.T5.Step6.png"></div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <p class="my-3 blog-body-text">This will trigger a modal with your victory celebration and the code phrase you need to complete the room. Once you have entered this into the THM page, you will be done with Room 2!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section>
+        <div class="container">
+            <div>
+                <h2 class="blog-body-heading">Summary:</h2>
+                <p class="blog-body-text">This room sets the tone for defensive security: this isn't just about reading policy or memorizing acronyms. It's about understand the objectives, stepping into the role of a defender and interacting with systems designed to simulate real world threats. Each task builds on the last to reinforce the mindset; observe, assess, respond.</p>
+            </div>
+        </div>
+    </section>
     <footer class="text-center" data-bs-theme="dark" style="height: 1;">
         <div class="container py-4 py-lg-5" style="color: var(--bs-white);">
             <ul class="list-inline" style="color: var(--bs-white);">
@@ -84,25 +290,6 @@
             <p class="mb-0" style="color: var(--bs-white);">Copyright © 2025 init-redraft</p>
         </div>
     </footer>
-    <div id="sidebar">
-        <div id="breadcrumb" class="breadcrumb"></div>
-        <h3>/File System</h3>
-        <ul class="list-unstyled">
-            <li onclick="toggleFolder(&#39;fieldnotes&#39;, event, [&#39;FieldNotes&#39;])">../FieldNotes<ul class="list-unstyled hidden" id="fieldnotes">
-                    <li onclick="toggleFolder(&#39;thm&#39;, event, [&#39;FieldNotes&#39;, &#39;THM&#39;])">../THM<ul class="list-unstyled hidden" id="thm">
-                            <li><a href="/Blog_Posts/THM%20Posts/THM%20Post%201.html" target="_blank">../THM/WebApp/Overview</a></li>
-                            <li><a href="/Blog_Posts/THM%20Posts/THM%20Post%202.html" target="_blank">../THM/Room_1</a></li>
-                        </ul>
-                    </li>
-                    <li onclick="toggleFolder(&#39;home_lab&#39;, event, [&#39;FieldNotes&#39;, &#39;HomeLab&#39;])">../Home_Lab</li>
-                    <li onclick="toggleFolder(&#39;python&#39;, event)">../Python</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div id="file-icon" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-folder">
-            <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"></path>
-        </svg></div>
     <script>
         (function() {
             let collections = document.querySelectorAll('[data-bss-type="blog-loop"]');

@@ -1,0 +1,5 @@
+{
+  "default_mode": "standard",
+  "available_modes": ["standard", "humorous"],
+  "fallback": "standard"
+}
