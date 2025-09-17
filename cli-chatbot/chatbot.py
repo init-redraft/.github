@@ -1,48 +1,91 @@
 from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 import json
 import logging
-
-# Logging setup
-
-logging.basicConfig(level=logging.INFO)
-
-# Load response map
-
-with open("responses.json", "r") as f:
-    response_map = json.load(f)
-
-# Response logic
-
-def rule_based_response(msg):
-    key = msg.lower().strip()
-    return response_map.get(key, "I'm still learning, try asking something else.")
-
-def llm_response(msg):
-    return "LLM integration not implemented yet."
-
-def generate_response(msg, engine="rule"):
-    if engine == "rule":
-        return rule_based_response(msg)
-    elif engine == "llm":
-        return llm_response(msg)  # Placeholder for future LLM logic
-
-
-# FastAPI app
+import os
 
 app = FastAPI()
 
-@app.post("/api/chat")
-async def chat_endpoint(request: Request):
-    data = await request.json()
-    user_message = data.get("message")
-    engine = data.get("engine", "rule")
+# Load config.json
+with open("config.json") as f:
+    config = json.load(f)
 
-    logging.info(f"Received message: {user_message}")
+cors_config = config.get("cors", {})
 
-    reply = generate_response(user_message, engine=engine)
-    return JSONResponse(content={"reply": reply})
+# CORS setup using config
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=cors_config.get("allow_origins", ["*"]),
+    allow_credentials=cors_config.get("allow_credentials", True),
+    allow_methods=cors_config.get("allow_methods", ["*"]),
+    allow_headers=cors_config.get("allow_headers", ["*"]),
+)
 
+# Logging
+logging.basicConfig(level=logging.INFO)
+
+# Default mode
+current_mode = "standard"
+available_modes = ["standard", "humorous"]
+
+# Load JSON files dynamically
+def load_json(file_name: str, mode: str = "standard"):
+    path = f"./data/{mode}/{file_name}"
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+# Route command to response or logic tree
+def route_command(msg: str, mode: str):
+    msg = msg.strip().lower()
+    responses = load_json("responses.json", mode)
+    logic_tree = load_json("logic_tree.json", mode)
+    commands = load_json("commands.json", mode)
+
+    # Direct response
+    if msg in responses:
+        return responses[msg]
+
+    # Command echo (if defined)
+    if msg in commands:
+        return commands[msg].get("echo", "Command executed.")
+
+    # Logic tree routing
+    if msg.startswith("ls"):
+        return json.dumps(logic_tree.get("ls", {}), indent=2)
+
+    # Mode toggle
+    if msg.startswith("set mode"):
+        new_mode = msg.replace("set mode", "").strip()
+        if new_mode in available_modes:
+            global current_mode
+            current_mode = new_mode
+            return f"{new_mode.capitalize()} mode activated."
+        return "Mode not recognized. Available modes: standard, humorous."
+
+    return "Command not recognized. Try 'help' or 'commands'."
+
+# Mode check endpoint
+@app.get("/mode")
+def get_mode():
+    return {"mode": current_mode}
+
+# Health check
 @app.get("/health")
-def health_check(): 
-    return {"status": "ok"}
+def health_check():
+    return {
+        "status": "ok",
+        "mode": current_mode,
+        "version": "1.1.0",
+        "author": "init-redraft"
+    }
+
+# Main chat endpoint
+@app.post("/chat")
+async def chat(request: Request):
+    data = await request.json()
+    msg = data.get("message", "")
+    logging.info(f"Received message: {msg}")
+    response = route_command(msg, current_mode)
+    return {"response": response}

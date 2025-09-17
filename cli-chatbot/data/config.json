@@ -1,5 +1,12 @@
 {
   "default_mode": "standard",
   "available_modes": ["standard", "humorous"],
-  "fallback": "standard"
+  "fallback": "standard",
+  
+  "cors": {
+    "allow_origins": ["https://init-redraft.com"],
+    "allow_credentials": true,
+    "allow_methods": ["GET", "POST"],
+    "allow_headers": ["Authorization", "Content-Type"]
+  }
 }
