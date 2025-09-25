@@ -226,6 +226,12 @@
 }
 
 @media (min-width: 1200px) {
+  .m-xl-5 {
+    margin: 3rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
   .me-xl-8 {
     margin-right: 7.5rem !important;
   }
@@ -234,6 +240,12 @@
 @media (min-width: 1200px) {
   .ms-xl-8 {
     margin-left: 7.5rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .p-xl-5 {
+    padding: 3rem !important;
   }
 }
 

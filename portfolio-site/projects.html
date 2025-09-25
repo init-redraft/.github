@@ -49,11 +49,72 @@
             <div class="collapse navbar-collapse" id="navbarResponsive-2">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item nav-link"><a class="nav-link" href="../../index.html" style="font-family: 'Fira Code', monospace;color: #00ff00;">/Home</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link active" href="projects.html" style="font-family: 'Fira Code', monospace;color: #00ff00;">/projects</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="home-lab.html" style="font-family: 'Fira Code', monospace;color: #00ff00;">/home-lab</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="certs.html" style="color: #00ff00;font-family: 'Fira Code', monospace;">/CERTS</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="../../blog.html" style="color: #00ff00;font-family: 'Fira Code', monospace;">/blog</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <section style="margin-top: 96px;">
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6">
+                    <div class="m-xl-5 p-xl-5"><img class="rounded img-fluid object-fit-cover w-100" style="min-height: 300px;" src="assets/img/projects/DDNS-Updater.png"></div>
+                </div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <h3 class="text-uppercase fw-bold" style="color: #00ff00;font-family: 'Fira Code', monospace;">DDNS Updater w/automated Failover</h3>
+                        <p class="my-3">This is my custom DDNS updater built for homelab accessibility and Cloudflare integration. This tool securely checks my public IP and updates DNS records automatically using Python and systemd scheduling. In order to ensure that the services I am hosting to the internet experience as little downtime as possible, I have included a falback script. This was designed to allow my T30 server to take over the responsibilities for this service should my Pi Cluster go offline. Designed with resilience, uptime and security in mind.</p>
+                        <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+                            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background: #000000;color: #00ff00;font-family: 'Fira Code', monospace;">
+                                        <h4 class="modal-title">DDNS Updater with automation and Fallback scripting</h4><button class="btn-close btn-close-white" type="button" aria-label="Close" data-bs-dismiss="modal" style="color: #00ff00;"></button>
+                                    </div>
+                                    <div class="modal-body" style="background: #000000;color: var(--bs-white);font-family: Cabin, sans-serif;">
+                                        <p>I started on this project because I wanted to be able to host backend logic and LLM chatbots on my private server. Unfortunately, I do not have a static IP address. However, my Cloudflare account allows me to use a subdomain to resolve my public IP address. This means I am able to set up the front end applications to target a subdomain. The only issue remaining is that anytime my ISP updates my IP address it breaks everything until I manually update it in Cloudflare. This updater automates the entire process.<br><br>The first step I created a Python script that I could run on my server that would fetch my current public IP address, compare it to the existing DNS record on Cloudflare, and update it if there’s a mismatch. I broke the logic into modular components — one script to grab the IP, one to handle the Cloudflare API call, and one to load the config securely from a .env file. That way, I could keep credentials out of the codebase and make the whole thing portable across environments.<br><br>Once the core logic was working, I wrapped it in a main.py entrypoint and scheduled it using systemd .service and .timer units. This lets the updater run automatically at regular intervals without needing cron or manual triggers. <br><br>From there, I added a fallback script that checks if my Pi is online and running its own updater — if it is, the server disables its own instance to avoid collisions. If the Pi goes down, the server picks up the slack. Simple, resilient, and hands-off.</p>
+                                    </div>
+                                    <div class="modal-footer" style="background: #000000;"></div>
+                                </div>
+                            </div>
+                        </div><button class="btn btn-primary btn-lg me-2" type="button" style="background: #00ff00;" data-bs-target="#modal-1" data-bs-toggle="modal">More</button><a class="btn btn-outline-primary btn-lg" role="button" href="https://github.com/init-redraft/.github/tree/main/ddns-updater(automated)" style="color: #00ff00;" target="_blank">Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6">
+                    <div class="m-xl-5 p-xl-5"><img class="rounded img-fluid object-fit-cover w-100" style="min-height: 300px;" src="assets/img/init-redraft%20emblem%204.png"></div>
+                </div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <h2 class="text-uppercase fw-bold">CLI Emulator</h2>
+                        <p class="my-3">Coming Soon...</p><a class="btn btn-primary btn-lg me-2" role="button" href="#">More</a><a class="btn btn-outline-primary btn-lg" role="button" href="#">Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6">
+                    <div class="m-xl-5 p-xl-5"><img class="rounded img-fluid object-fit-cover w-100" style="min-height: 300px;" src="assets/img/init-redraft%20emblem%204.png"></div>
+                </div>
+                <div class="col-md-6 d-md-flex align-items-md-center">
+                    <div style="max-width: 350px;">
+                        <h2 class="text-uppercase fw-bold">VDU Tracker Web App</h2>
+                        <p class="my-3">Coming Soon...</p><a class="btn btn-primary btn-lg me-2" role="button" href="#">More</a><a class="btn btn-outline-primary btn-lg" role="button" href="#">Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="text-center" data-bs-theme="dark" style="height: 1;">
         <div class="container py-4 py-lg-5" style="color: var(--bs-white);">
             <ul class="list-inline" style="color: var(--bs-white);">
@@ -97,6 +158,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/cli.js"></script>
+    <script src="assets/js/lab-status.js"></script>
     <script src="assets/js/sidebar.js"></script>
 </body>
 

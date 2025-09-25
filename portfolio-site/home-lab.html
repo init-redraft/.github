@@ -49,11 +49,123 @@
             <div class="collapse navbar-collapse" id="navbarResponsive-2">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item nav-link"><a class="nav-link" href="../../index.html" style="font-family: 'Fira Code', monospace;color: #00ff00;">/Home</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="projects.html" style="font-family: 'Fira Code', monospace;color: #00ff00;">/projects</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link active" href="home-lab.html" style="font-family: 'Fira Code', monospace;color: #00ff00;">/home-lab</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="certs.html" style="color: #00ff00;font-family: 'Fira Code', monospace;">/CERTS</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="../../blog.html" style="color: #00ff00;font-family: 'Fira Code', monospace;">/blog</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <section class="ms-2 ms-sm-2 ms-md-4 ms-lg-6 ms-xl-8 ms-xxl-10 me-2 me-sm-2 me-md-4 me-lg-6 me-xl-8 me-xxl-10" style="margin-top: 95px;font-family: 'Fira Code', monospace;color: #00ff00;text-align: center;">
+        <div>
+            <h1>Home LAb and Network&nbsp;</h1>
+            <p style="color: var(--bs-body-bg);font-family: Cabin, sans-serif;">This page reflects both the live state of, and future roadmap for, my home lab and network topology.</p>
+            <h5 style="font-family: 'Fira Code', monospace;">Mission Statement</h5>
+            <p style="color: var(--bs-body-bg);font-family: Cabin, sans-serif;">My lab is my proving ground for testing segmentation, resilience and incident response workflows. It mirrors the principals expected in a highly sensitive network environment.</p>
+            <p style="color: var(--bs-body-bg);font-family: Cabin, sans-serif;text-align: left;margin-bottom: 10px;">Legend</p>
+            <ul class="list-unstyled text-start" style="color: var(--bs-body-bg);font-family: Cabin, sans-serif;">
+                <li data-bs-toggle="tooltip" data-bss-tooltip="" title="Service or System is online and reporting."><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-square-fill" style="color: var(--bs-green);">
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z"></path>
+                    </svg>&nbsp;Active</li>
+                <li data-bs-toggle="tooltip" data-bss-tooltip="" title="System/Service is active but not fully healthy. Performance or integrity may be impacted."><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-square-fill" style="color: var(--bs-yellow);">
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z"></path>
+                    </svg>&nbsp;Degraded</li>
+                <li data-bs-toggle="tooltip" data-bss-tooltip="" title="Service or System is offline and/or not reporting."><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-square-fill" style="color: var(--bs-red);">
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z"></path>
+                    </svg>&nbsp;Down</li>
+                <li data-bs-toggle="tooltip" data-bss-tooltip="" title="Future planned System or Service rollout."><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-square-fill" style="color: var(--bs-gray);">
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z"></path>
+                    </svg>&nbsp;Future</li>
+            </ul>
+        </div>
+        <hr style="color: #00ff00;">
+    </section>
+    <section class="ms-2 ms-sm-2 ms-md-4 ms-lg-6 ms-xl-8 ms-xxl-10 me-2 me-sm-2 me-md-4 me-lg-6 me-xl-8 me-xxl-10">
+        <div>
+            <h2 style="font-family: 'Fira Code', monospace;color: #00ff00;text-align: center;">Current Services</h2>
+        </div>
+        <hr style="color: #00ff00;">
+        <div class="table-responsive" style="background: rgba(255,255,255,0);color: var(--bs-white);">
+            <table class="table table-dark table-bordered">
+                <thead>
+                    <tr style="color: #00ff00;">
+                        <th style="background: rgba(255,255,255,0);color: var(--bs-white);font-family: Cabin, sans-serif;">System</th>
+                        <th style="background: rgba(255,255,255,0);color: var(--bs-white);font-family: Cabin, sans-serif;">DNS Updater</th>
+                        <th style="background: rgba(255,255,255,0);color: var(--bs-white);font-family: Cabin, sans-serif;">WireGuard</th>
+                        <th style="background: rgba(255,255,255,0);color: var(--bs-white);font-family: Cabin, sans-serif;">Pi Hole</th>
+                        <th style="background: rgba(255,255,255,0);color: var(--bs-white);font-family: Cabin, sans-serif;">UFW</th>
+                    </tr>
+                </thead>
+                <tbody id="status-table" style="color: #00ff00;"></tbody>
+            </table>
+        </div>
+        <hr style="color: #00ff00;">
+    </section>
+    <section class="ms-2 ms-sm-2 ms-md-4 ms-lg-6 ms-xl-8 ms-xxl-10 me-2 me-sm-2 me-md-4 me-lg-6 me-xl-8 me-xxl-10">
+        <div style="text-align: center;margin-bottom: 36px;">
+            <h2 style="text-align: center;font-family: 'Fira Code', monospace;color: #00ff00;">Network Topology</h2>
+            <p style="font-family: Cabin, sans-serif;text-align: center;">My network is designed with resilience, security and segmentation in mind. I am working toward a fully segmented network. Below are diagrams of my network topology as it stands and the future roadmap.</p>
+            <h3 style="color: #00ff00;font-family: 'Fira Code', monospace;text-align: center;">Current Network Topology</h3><button class="btn btn-primary" type="button" style="background: #00ff00;border-radius: 15px;" data-bs-target="#modal-1" data-bs-toggle="modal">See Topology</button>
+            <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+                <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header"><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button></div>
+                        <div class="modal-body"><img class="img-fluid object-fit-scale w-100 h-100" width="1502" height="239" src="assets/img/lab%20pictures/Current%20Network%20Topology.png" alt="Current Network Topology">
+                            <p style="color: var(--bs-black);font-family: Cabin, sans-serif;">My current home lab is designed around resilience, segmentation and security-first principles. The lab is anchored by a Dell T30 Server (Modified) running Proxmox for virtualization and NAS Storage. Supporting devices include a Raspberry Pi 4B (the first in what will eventually by a 6 - 12 Pi cluster) running Pi-Hole DNS Filtering, an Automated DDNS Update service (custom written) and a Health Script to report the live system and service statuses for the live lab feed at the top of the page. I have not segmented the network via VLAN as my current router does not support this.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="ms-2 ms-sm-2 ms-md-4 ms-lg-6 ms-xl-8 ms-xxl-10 me-2 me-sm-2 me-md-4 me-lg-6 me-xl-8 me-xxl-10">
+        <div style="text-align: center;">
+            <h3 style="color: #00ff00;font-family: 'Fira Code', monospace;text-align: center;">Future Network Topology Roadmap</h3>
+            <ul class="text-start">
+                <li style="color: var(--bs-white);font-family: Cabin, sans-serif;">Planned SIEM integration using ELKStack</li>
+                <li style="color: var(--bs-white);font-family: Cabin, sans-serif;">Honeypot deployment using dedicated Raspberry Pi.</li>
+                <li style="color: var(--bs-white);font-family: Cabin, sans-serif;">VLAN Enforcement via upgraded firewall/router.</li>
+                <li style="color: var(--bs-white);font-family: Cabin, sans-serif;">IDS/IPS Deployment</li>
+            </ul>
+            <div class="modal fade" role="dialog" tabindex="-1" id="modal-2">
+                <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header"><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button></div>
+                        <div class="modal-body"><img class="img-fluid" width="1509" height="713" src="assets/img/lab%20pictures/Future%20Topology.png">
+                            <p style="margin-bottom: 10px;color: var(--bs-black);font-family: Cabin, sans-serif;"><br>My future home lab roadmap is architected around the <strong>CIA Triad</strong>:</p>
+                            <ul class="text-start" style="color: var(--bs-black);font-family: Cabin, sans-serif;">
+                                <li class="text-start"><strong>Confidentiality</strong>: Segmented networks and air-gapped high-risk endpoints ensure sensitive services remain isolated and protected.</li>
+                                <li><strong>Integrity</strong>: All services and endpoints will implement verbose logging and alerting structures to detect anomalies and enforce accountability.</li>
+                                <li><strong>Availability</strong>: Key services will be duplicated across network resources with automated failover scripting to maintain uptime and operational resilience.</li>
+                            </ul>
+                            <p style="color: var(--bs-black);font-family: Cabin, sans-serif;">The planned architecture introduces full <strong>VLAN segmentation</strong>, separating the lab environment (used for malware detonation and sandboxing) from both the <strong>residential network</strong> and the <strong>IoT/PoE camera network</strong>. This segmentation limits lateral movement, enforces trust boundaries, and ensures service stability across all zones.<br><br>This roadmap reflects my commitment to building a modular, security-first environment that mirrors enterprise-grade practices. Each component is designed to reinforce defense-in-depth, operational clarity, and continuous learning in cyber security engineering.</p>
+                        </div>
+                    </div>
+                </div>
+            </div><button class="btn btn-primary" type="button" style="background: #00ff00;border-radius: 15px;" data-bs-target="#modal-2" data-bs-toggle="modal">See Topology</button>
+        </div>
+        <hr style="color: #00ff00;">
+    </section>
+    <section class="ms-2 ms-sm-2 ms-md-4 ms-lg-6 ms-xl-8 ms-xxl-10 me-2 me-sm-2 me-md-4 me-lg-6 me-xl-8 me-xxl-10">
+        <div>
+            <h1 style="color: #00ff00;font-family: 'Fira Code', monospace;">Design Principles</h1>
+            <p style="color: var(--bs-white);font-family: Cabin, sans-serif;">Everything should be modular to allow for adaptation. Zero Trust boundaries should be enforced. Defense in depth in practice. Resilience first architecture.</p>
+        </div>
+        <hr style="color: #00ff00;">
+    </section>
+    <section class="ms-2 ms-sm-2 ms-md-4 ms-lg-6 ms-xl-8 ms-xxl-10 me-2 me-sm-2 me-md-4 me-lg-6 me-xl-8 me-xxl-10">
+        <div>
+            <p style="font-family: Cabin, sans-serif;">My home-lab is meant to be a reflection of my approach to cyber security architecture:</p>
+            <ul class="list-unstyled">
+                <li style="font-size: 24px;font-family: 'Fira Code', monospace;color: #00ff00;">Modular</li>
+                <li class="text-center" style="font-size: 24px;font-family: 'Fira Code', monospace;color: #00ff00;">Resilient</li>
+                <li class="text-end" style="font-size: 24px;font-family: 'Fira Code', monospace;color: #00ff00;">Evolving</li>
+            </ul>
+            <p style="font-family: Cabin, sans-serif;">This is where I validate concepts before applying them in production environments.</p>
+        </div>
+    </section>
     <footer class="text-center" data-bs-theme="dark" style="height: 1;">
         <div class="container py-4 py-lg-5" style="color: var(--bs-white);">
             <ul class="list-inline" style="color: var(--bs-white);">
@@ -97,6 +209,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/cli.js"></script>
+    <script src="assets/js/lab-status.js"></script>
     <script src="assets/js/sidebar.js"></script>
 </body>
 
